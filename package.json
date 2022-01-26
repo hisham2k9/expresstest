@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "express": "^4.17.2",
+    "mongodb": "^4.3.1"
+  },
+  "name": "testnode",
+  "version": "1.0.0",
+  "description": "testing node js with express",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hisham2k9/expresstest.git"
+  },
+  "keywords": [
+    "git",
+    "test",
+    "express",
+    "node"
+  ],
+  "author": "hisham2k9",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hisham2k9/expresstest/issues"
+  },
+  "homepage": "https://github.com/hisham2k9/expresstest#readme"
+}
