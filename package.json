@@ -1,15 +1,15 @@
 {
   "dependencies": {
     "express": "^4.17.2",
-    "mongodb": "^4.3.1"
+    "mongodb": "^4.3.1",
+    "mongoose": "^6.1.8"
   },
   "name": "testnode",
   "version": "1.0.0",
   "description": "testing node js with express",
   "main": "app.js",
-  "devDependencies": {},
   "scripts": {
-    "test": "test"
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/hisham2k9/expresstest/issues"
   },
-  "homepage": "https://github.com/hisham2k9/expresstest#readme"
+  "homepage": "https://github.com/hisham2k9/expresstest#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
 }

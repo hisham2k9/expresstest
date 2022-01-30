@@ -1,26 +1,18 @@
-const http = require ("http");
-const express = require("express");
-const server = http.createServer((req,res) => {
-    if (req.url == "/")
-    {
-        res.write("hello hisham");
-        res.end();
-    }
-    if (req.url == "/api")
-    {
-        res.write(JSON.stringify([1,2,3]));
-        res.end();
-    }
-});
-var port = 3000;
-server.listen(port);
-server.on("connection",(socket) =>{
-    console.log("New Connection...");
-    //console.log(socket);
+const express = require("express")
+const mongoose = require("mongoose")
+const url = 'mongodb://localhost/AlienDBex'
+const app = express()
+
+mongoose.connect(url, {useNewUrlParser:true})
+
+const con = mongoose.connection
+
+con.on("open" , () =>{
+    console.log("connected..")
 })
-
-
-const Calculator = require("./calc");
-var calculator = new Calculator();
-console.log("div of value 0 and 1 is :", calculator.div(0,1))
-console.log(`listening to port ${port}`)
+app.use(express.json())
+const alienRouter = require("./routes/aliens.js")
+app.use ("/aliens", alienRouter)
+app.listen(3000, () => {
+    console.log("Server started....")
+})
